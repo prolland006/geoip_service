@@ -1,3 +1,4 @@
 #admin/.htaccess
 GeoLite2-City.mmdb
-.idea*.*
+.idea*/*
+.idea/

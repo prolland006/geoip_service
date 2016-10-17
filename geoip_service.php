@@ -10,10 +10,14 @@ $reader = new Reader('GeoLite2-City.mmdb');
 // "country".
 $record = $reader->city($_GET['ip']);
 
-/*header("Access-Control-Allow-Origin: *");
+/*
+ * curl to test CORS
+ * curl --header "Origin: http://localhost:8100/" --header "Access-Control-Request-Method: GET" --header "Access-Control-Request-Headers: content-type" -X OPTIONS --verbose "http://nice-informatique-service.fr/geoip_service/geoip_service.php?ip=79.141.163.88&data=json"
+ */
+header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET');
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-*/
+
 
 switch ($_GET['data']) {
     case "isoCode" :
